@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel = "stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
+    <link rel="icon" type="image/x-icon" href="/image/images.jpg">
     <title>DutchBaby Website - Recipes</title>
     <script>
         const viewportWidth = window.innerWidth;
@@ -34,7 +36,11 @@
 </head>
 
 <body onload="thing()">
-    <div class="skipmain">Skip to Main content</div>
+    <h1>DutchBaby Website</h1>
+    
+    <div class="skipmain"><a href="#main" >
+            Skip to Main Content
+        </a></div>
     
     <script>
      function changeBackground() {
@@ -47,10 +53,11 @@
     </script>
     
     <nav>
+        <img src="image/images.jpg" alt="">
         <ul>
-            <li id="Toplist"><a href="index.html">Recipes - Current Page</a></li>
+            <li id="Toplist"><a href="index.html" id = "curPage">Recipes - Current Page</a></li>
             <li id="Toplist"><a href="pets.html">Pets</a></li>
-            <li id="Toplist"><a href="travel.html">Travel</a></li>
+            <li id="Toplist"><a href="travel.html" >Travel</a></li>
         </ul>
     </nav>
     <main>
@@ -69,7 +76,7 @@
             </ul>
         </p>
 
-        <h4>Recipe Steps – Just write Recipe Steps</h4>
+        <h3>Recipe Steps – Just write Recipe Steps</h3>
 
         <div class="grid-container">
             <div class="grid-item grid-item-1">preheat oven to 425 degrees</div>

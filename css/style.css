@@ -3,9 +3,12 @@ body{
     color: aliceblue;
     }
 
-    .skipmain{
+    .skipmain a{
         display: none;
     }
+
+
+    
 
     a{
         color: rgb(234, 255, 0);
@@ -28,12 +31,19 @@ body{
     p{
         line-height: double;
     }
+    
     img{
         border: solid black 5px;
         padding: 10px;
-        margin: 20 px;
+        width: fit-content;
+        margin: 20px;
         border-top-right-radius: 30px;
     }
+     img:hover {
+                    border: solid red 10px;
+                }  
+    
+    
     nav{
         border: 2px solid black;
         font-size: 30px;
@@ -44,6 +54,7 @@ body{
         border: 1px black solid;
         padding: 30px;
         display: block;
+        text-decoration: none;
         
     }
 
@@ -53,6 +64,12 @@ body{
         grid-template-rows: 3fr;
         grid-gap: 20px;
         padding: 10px;
+    }
+    #curPage{
+        color: rgb(226, 43, 43);
+        text-decoration:underline;
+        font-weight: bold;
+        font-size: 36px;
     }
     @media only screen and (min-width: 768px) and (max-width: 916px) {
         /* Styles for tablet view */
@@ -84,7 +101,7 @@ body{
             p{
                 line-height: double;
             }
-
+            
             img{
                 border: solid black 5px;
                 padding: 10px;
@@ -178,7 +195,11 @@ body{
 
             nav{
                 border: 2px solid black;
-                
+                background-image: url("../image/images.jpg");
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
             }
 
             nav li{
@@ -195,10 +216,36 @@ body{
                 grid-gap: 20px;
                 padding: 10px;
             }
-
-            .skipmain{
-                display: contents;
+                        /*
+                    .skip a {
+                        background: white;
+                        left: 0;
+                        padding: 6px;
+                        -webkit-transition: top 1s ease-out;
+                        transition: top 1s ease-out;
+                        z-index: 1;
+                        top: -40px;
+                        position: relative;
+                    }
+            
+                    .skip a:focus {
+                        top: 20px;
+                        position: relative;
+                    }
+                */
+            .skipmain a{
+                display: block;
+                top: -100px;
+                left: 0;
+                padding: 6px;
+                z-index: 1;
+                position: relative;
             }
+            .skipmain a:focus{
+                top: 20px;
+                position: relative;
+            }
+
       }
 
       @keyframes animation {
@@ -222,7 +269,7 @@ body{
       }
 
       @media (prefers-reduced-motion: reduce) {
-        *{
+        .animation{
             animation: none;
             transition: none;
         }
@@ -233,3 +280,4 @@ body{
             display: block;
         }
       }
+    
