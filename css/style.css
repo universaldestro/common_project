@@ -7,9 +7,6 @@ body{
         display: none;
     }
 
-
-    
-
     a{
         color: rgb(234, 255, 0);
     }
@@ -30,12 +27,13 @@ body{
     }
     p{
         line-height: double;
+        padding: 10px;
     }
     
     img{
         border: solid black 5px;
         padding: 10px;
-        width: fit-content;
+        width: 200px;
         margin: 20px;
         border-top-right-radius: 30px;
     }
@@ -46,13 +44,19 @@ body{
     
     nav{
         border: 2px solid black;
-        font-size: 30px;
+        font-size: 20px;
+        background-image: url("../image/images.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
     }
     nav li
     {
         height: 50px;
         border: 1px black solid;
-        padding: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         display: block;
         text-decoration: none;
         
@@ -60,79 +64,18 @@ body{
 
     .grid-container{
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 3fr;
-        grid-gap: 20px;
+        grid-gap: 10px;
         padding: 10px;
     }
     #curPage{
         color: rgb(226, 43, 43);
         text-decoration:underline;
         font-weight: bold;
-        font-size: 36px;
+        font-size: 25px;
     }
-    @media only screen and (min-width: 768px) and (max-width: 916px) {
-        /* Styles for tablet view */
-        body{
-            background-color: rgb(25, 24, 24);
-            color: aliceblue;
-            }
-            a{
-                color: rgb(234, 255, 0);
-            }
-            h1{
-                font-size: 12;
-                font-family: 'Courier New', Courier, monospace ;
-                align-items: center;
-            }
 
-            h2{
-                font-size: 12;
-                font-family: 'Courier New', Courier, monospace ;
-                align-items: center;
-            }
-
-            h3{
-                font-size: 12;
-                font-family: 'Courier New', Courier, monospace ;
-                color: white;
-            }
-
-            p{
-                line-height: double;
-            }
-            
-            img{
-                border: solid black 5px;
-                padding: 10px;
-                margin: 20 px;
-                border-top-right-radius: 30px;
-            }
-
-            nav{
-                border: 2px solid black;
-                
-            }
-
-            nav li{
-                height: 50px;
-                border: 1px black solid;
-                display: inline-block;
-                
-            }
-        
-            .grid-container{
-                display: grid;
-                grid-template-columns: 1fr 2fr 1fr;
-                grid-template-rows: 3fr;
-                grid-gap: 20px;
-                padding: 10px;
-            }
-
-            .skipmain{
-                display: contents;
-            }
-      }
 
       @keyframes animation {
         from {background-color: red;}
@@ -155,98 +98,170 @@ body{
       }
 
     
-
-      @media only screen and (min-width: 916px){
-        body{
-            background-color: rgb(25, 24, 24);
-            color: aliceblue;
-            }
-            a{
-                color: rgb(234, 255, 0);
-            }
-            h1{
-                font-size: 12;
-                font-family: 'Courier New', Courier, monospace ;
-                align-items: center;
-            }
-
-            h2{
-                font-size: 12;
-                font-family: 'Courier New', Courier, monospace ;
-                align-items: center;
-            }
-
-            h3{
-                font-size: 12;
-                font-family: 'Courier New', Courier, monospace ;
-                color: white;
-            }
-
-            p{
-                line-height: double;
-            }
-
-            img{
-                border: solid black 5px;
-                padding: 10px;
-                margin: 20 px;
-                border-top-right-radius: 30px;
-            }
-
-            nav{
-                border: 2px solid black;
+      /*tablet view*/
+          @media only screen and (min-width: 768px){
+    
+              /* Styles for tablet view */
+              body {
+                  background-color: rgb(25, 24, 24);
+                  color: aliceblue;
+              }
+    
+              a {
+                  color: rgb(234, 255, 0);
+              }
+    
+              h1 {
+                  font-size: 12;
+                  font-family: 'Courier New', Courier, monospace;
+                  align-items: center;
+              }
+    
+              h2 {
+                  font-size: 12;
+                  font-family: 'Courier New', Courier, monospace;
+                  align-items: center;
+              }
+    
+              h3 {
+                  font-size: 12;
+                  font-family: 'Courier New', Courier, monospace;
+                  color: white;
+              }
+    
+              p {
+                  line-height: double;
+              }
+    
+              img {
+                  border: solid black 5px;
+                  padding: 10px;
+                  margin: 20 px;
+                  border-top-right-radius: 30px;
+              }
+    
+              nav {
+                  border: 2px solid black;
                 background-image: url("../image/images.jpg");
                     background-attachment: fixed;
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
-            }
+              }
+    
+              nav li {
+                  height: 50px;
+                  border: 1px black solid;
+                  display: inline-block;
+    
+              }
+    
+              .grid-container {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  grid-template-rows: 3fr;
+                  grid-gap: 20px;
+                  padding: 10px;
+              }
+    
+              .skipmain {
+                  display: contents;
+              }
+          }
 
-            nav li{
-                height: 50px;
-                border: 1px black solid;
-                display: inline-block;
+      /*desktop view*/
+        @media only screen and (min-width: 992px){
+                body{
+                    background-color: rgb(25, 24, 24);
+                    color: aliceblue;
+                    }
+                    a{
+                        color: rgb(234, 255, 0);
+                    }
+                    h1{
+                        font-size: 12;
+                        font-family: 'Courier New', Courier, monospace ;
+                        align-items: center;
+                    }
+
+                    h2{
+                        font-size: 12;
+                        font-family: 'Courier New', Courier, monospace ;
+                        align-items: center;
+                    }
+
+                    h3{
+                        font-size: 12;
+                        font-family: 'Courier New', Courier, monospace ;
+                        color: white;
+                    }
+
+                    p{
+                        line-height: double;
+                    }
+
+                    img{
+                        border: solid black 5px;
+                        padding: 10px;
+                        margin: 20 px;
+                        border-top-right-radius: 30px;
+                    }
+
+                    nav{
+                        border: 2px solid black;
+                        background-image: url("../image/images.jpg");
+                            background-attachment: fixed;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                    }
+
+                    nav li{
+                        height: 50px;
+                        border: 1px black solid;
+                        display: inline-block;
+                        
+                    }
                 
-            }
-        
-            .grid-container{
-                display: grid;
-                grid-template-columns: 1fr 2fr 1fr;
-                grid-template-rows: 3fr;
-                grid-gap: 20px;
-                padding: 10px;
-            }
-                        /*
-                    .skip a {
-                        background: white;
+                    .grid-container{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: 3fr;
+                        grid-gap: 20px;
+                        padding: 10px;
+                    }
+                                /*
+                            .skip a {
+                                background: white;
+                                left: 0;
+                                padding: 6px;
+                                -webkit-transition: top 1s ease-out;
+                                transition: top 1s ease-out;
+                                z-index: 1;
+                                top: -40px;
+                                position: relative;
+                            }
+                    
+                            .skip a:focus {
+                                top: 20px;
+                                position: relative;
+                            }
+                        */
+                    .skipmain a{
+                        display: block;
+                        top: -100px;
                         left: 0;
                         padding: 6px;
-                        -webkit-transition: top 1s ease-out;
-                        transition: top 1s ease-out;
                         z-index: 1;
-                        top: -40px;
                         position: relative;
                     }
-            
-                    .skip a:focus {
+                    .skipmain a:focus{
                         top: 20px;
                         position: relative;
                     }
-                */
-            .skipmain a{
-                display: block;
-                top: -100px;
-                left: 0;
-                padding: 6px;
-                z-index: 1;
-                position: relative;
-            }
-            .skipmain a:focus{
-                top: 20px;
-                position: relative;
+
             }
 
-      }
 
       @keyframes animation {
         from {background-color: red;}
