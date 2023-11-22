@@ -37,11 +37,7 @@
 
 <body onload="thing()">
     <h1>DutchBaby Website</h1>
-    
-    <div class="skipmain"><a href="#main" >
-            Skip to Main Content
-        </a></div>
-    
+ 
     <script>
      function changeBackground() {
                 
@@ -51,7 +47,9 @@
             document.body.style.backgroundColor = a;
         }   
     </script>
-    
+    <div class="skipmain">
+        <a href="#main">Skip to Main Content</a>
+    </div>
     <nav>
         <img src="image/images.jpg" alt="">
         <ul>
@@ -60,10 +58,10 @@
             <li id="Toplist"><a href="travel.html" >Travel</a></li>
         </ul>
     </nav>
-    <main>
+    <main id = "main">
         <h2>Dutch baby pancake</h2>
 
-        <img src="image/dutchbaby.JPG" alt="An eggy sweet pancake. Tastes and smells like nutmeg and sugar. Rises with heat and falls elsewhere. Is essentially a giant crepe." width="400">
+        <img src="image/dutchbaby.JPG" alt="An eggy sweet pancake." width="400">
         <p>
             Recipe Ingredients – Just write Recipe Ingredients
             <ul>
@@ -75,7 +73,7 @@
                 <li>¼ oil</li>
             </ul>
         </p>
-
+        <div class="last_animation"> Final</div>
         <h3>Recipe Steps – Just write Recipe Steps</h3>
 
         <div class="grid-container">
@@ -90,6 +88,7 @@
         </div>
 
         <div class="animation">THE PATH TO FOREVER ESCALATION</div>
+        
 
         <h3>Photo Gallery</h3>
         <ul>

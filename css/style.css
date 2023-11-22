@@ -99,7 +99,7 @@ body{
 
     
       /*tablet view*/
-          @media only screen and (min-width: 768px){
+        @media only screen and (min-width: 768px){
     
               /* Styles for tablet view */
               body {
@@ -163,10 +163,20 @@ body{
                   grid-gap: 20px;
                   padding: 10px;
               }
-    
-              .skipmain {
-                  display: contents;
-              }
+
+            .skipmain a {
+                display: block;
+                top: -40px;
+                left: 0;
+                padding: 6px;
+                z-index: 1;
+                position: relative;
+            }
+            
+            .skipmain a:focus {
+                top: 20px;
+                position: relative;
+            }
           }
 
       /*desktop view*/
@@ -249,7 +259,7 @@ body{
                         */
                     .skipmain a{
                         display: block;
-                        top: -100px;
+                        top: -40px;
                         left: 0;
                         padding: 6px;
                         z-index: 1;
@@ -262,7 +272,25 @@ body{
 
             }
 
-
+      .animation {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        animation-name: animation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+      
+      .last_animation{
+        width: 300px;
+        height: 300px;
+        position: relative;
+        background-color: black;
+        animation-name: last;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+      
       @keyframes animation {
         from {background-color: red;}
         to {background-color: yellow;}
@@ -272,19 +300,19 @@ body{
         to {background-color: indigo;}
         to {background-color: midnightblue;}
       }
-
-      .animation {
-        width: 100px;
-        height: 100px;
-        background-color: black;
-        animation-name: animation;
-        animation-duration: 10s;
-        
-        animation-iteration-count: infinite;
+      
+      @keyframes last{
+        from {
+                background-color: rgb(0, 0, 0); left: 300px; top: 0px;
+            }  
       }
 
       @media (prefers-reduced-motion: reduce) {
         .animation{
+            animation: none;
+            transition: none;
+        }
+        .last_animation{
             animation: none;
             transition: none;
         }
