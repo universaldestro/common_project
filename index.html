@@ -9,6 +9,7 @@
     <link rel = "stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
     <link rel="icon" type="image/x-icon" href="/image/images.jpg">
     <title>DutchBaby Website - Recipes</title>
+    
     <script>
         const viewportWidth = window.innerWidth;
         console.log(viewportWidth);
@@ -37,14 +38,28 @@
 
 <body onload="thing()">
    <div role="banner">
-    <h1> DutchBaby Website</h1>
+    <h1 id = "message"> DutchBaby Website</h1>
    </div> 
- 
+   <script>
+        const colors = ["black","white","red","green","yellow"];
+        let message ="Hi ";
+        let nm = prompt("what is your name?");
+        message +=nm
+        message +="! This is The Dutch Baby Website! "
+        message+="You should try colors"
+            for(let i =0; i < 5; i++){
+               message+=" ";
+               message += colors[i] ; 
+            }
+        message+=" in the tablet view."
+        document.querySelector("#message").innerHTML = message;
+    </script>
+
     <script>
-     function changeBackground() {
+    function changeBackground() {
                 
             let a = document.getElementById('input').value;
-           
+
             console.log(a)
             document.body.style.backgroundColor = a;
         }   
@@ -52,7 +67,7 @@
     <div class="skipmain">
         <a href="#main">Skip to Main Content</a>
     </div>
-    <nav role="navigation">
+    <nav >
         <img src="image/images.jpg" alt="">
         <ul>
             <li ><a href="index.html" id = "curPage">Recipes - Current Page</a></li>
@@ -60,7 +75,7 @@
             <li ><a href="travel.html" >Travel</a></li>
         </ul>
     </nav>
-    <main id = "main" role="main">
+    <main id = "main">
         <h2>Dutch baby pancake</h2>
 
         <img src="image/dutchbaby.JPG" alt="An eggy sweet pancake." width="400">

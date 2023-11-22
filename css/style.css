@@ -166,7 +166,7 @@ body{
 
             .skipmain a {
                 display: block;
-                top: -40px;
+                top: -100px;
                 left: 0;
                 padding: 6px;
                 z-index: 1;
@@ -259,7 +259,7 @@ body{
                         */
                     .skipmain a{
                         display: block;
-                        top: -40px;
+                        top: -100px;
                         left: 0;
                         padding: 6px;
                         z-index: 1;
